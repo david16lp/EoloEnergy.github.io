@@ -1,0 +1,250 @@
+body{
+    margin: 0;
+    background-size: cover;
+    background-color: antiquewhite;
+    background-size: 100%;
+
+}
+header{
+    width: 100%;
+    background-image: url(fondoheader.jpg);
+    height: 110px;
+    transition: 0.5s;
+    cursor: pointer;
+    animation: cambiar 100s ease-in-out infinite;
+    position:flex;
+    top: 0;
+    height: 100px;
+}
+@keyframes cambiar {
+    0%{background-position:0 50%;}
+    50%{background-position: 100% 50%;}
+    100%{background-position: 0 50%;}
+}
+.barra {
+    font-family: 'Lato', sans-serif;
+    /**Alto y ancho de donde se va a activar cuando pase el mouse**/
+    width:10%;
+    height:10%;
+    /*Para que este siempre en la misma parte de la pantalla aunque se haga scroll*/
+    position:fixed;
+    /*Tiempo en el que va a transitar la animacion*/
+    transition: .4s all ;
+    /*este arriba de todo en la pantalla*/
+    z-index: 1;  
+    justify-content: space-between;
+    float: left;
+}
+
+
+.barra ul{
+    /*solucionar espacios no deseados*/
+    padding:0px;
+    text-align: center;
+        
+}
+.barra  li{
+    /*Velocidad de transicion del contenido*/
+    transition:all .3s;
+    list-style: none; 
+}
+
+.barra a{
+    text-decoration: none;
+    
+    font-weight: normal;
+    
+    /*La letra crece con el menu de esta manera no se va a ver como se ajusta al margen mientras crece*/
+    transition: .3s all ;
+    /*Se ocultan los elementos*/
+    font-size: 0px;
+    padding:0px;
+}
+
+.barra  h2{
+    text-align: center;
+    color:white;
+    padding:7px;
+    padding-bottom:7px;
+
+    /*Se oculta el h2*/
+    font-size:0px;   
+}
+
+.barra img{
+    padding-top: 30px;
+    padding-left: 10px;
+    float: left;
+    justify-content: space-between;
+}
+
+.barra:hover{
+    /*Tamaño cuando el cursor señale la barra*/
+    width: 50%;
+    height:100%;
+    
+    /*Color*/
+    background: rgba(5, 33, 51, 0.98);
+}
+.barra:hover h2{
+    /*posicion dentro de barra del h2*/
+    padding:15px;
+    font-size: 35px;
+}
+.barra:hover a{ 
+    font-size:20px ;
+    color:white;
+    /*Se usa el display block para que el enlace respete el margin*/
+    display: block;
+    padding:10px;
+    justify-content: space-between;
+
+}
+nav span{
+    justify-content: space-between;
+}
+.barra:hover img{
+    /*Desaparecer la imagen*/
+    height:0px;
+}
+
+
+.barra:hover li{
+    border-top:1px solid #03121b;
+    /*Espacios entre las lineas y el contenido*/
+    
+    width:100%;
+        
+}
+.barra:hover ul:last-of-type{
+
+
+    border-bottom: 1px solid #03121b;
+}
+
+.barra:hover a:hover{ 
+    font-size: 25px;
+    padding: 30px 0px; 
+    background: rgba(23, 78, 112, 0.98);  
+}
+header nav ul li:hover .children{
+    display: block;
+}
+
+ul:hover .children{
+    display: block;
+}
+ul .children{
+    display: none;
+}
+
+.logo_EE{
+    display: block;
+    width: 100px;
+    height: 100px;
+    z-index: 1;
+    float: left;
+}
+
+.logo_ed{
+    width: 130px;
+    height: 100px;
+    position: fixed;
+    left: 100;
+    top: 0;
+    margin-top: 10px;
+    margin-left: 17em;
+}
+
+#nos{
+    font-weight: 600;
+    font-style: italic;
+    font-family: 'Numans', sans-serif;
+    margin-left: 10px;
+    height: 10px;
+}
+#med{
+    font-style: italic;
+    font-family: 'Numans', sans-serif;
+    font-weight: 900px;
+    font-weight: bold;
+    margin-left: 10px;
+    height: 10px;
+}
+#loc{
+    font-style: italic;
+    font-weight: bold;
+    margin-left: 10px;
+    font-family: 'Numans', sans-serif;
+    height: 10px;
+
+}
+
+.p_med{
+    font-family: 'Numans', sans-serif;
+    font-size: 15px;
+    margin-left: 10px;
+    margin-top: 0;
+}
+.p_loc{
+    font-family: 'Numans', sans-serif;
+    font-size: 15px;
+    margin-left: 10px;
+    margin-top: 0;
+    margin-right: 10px;
+}
+
+.p_nos{
+    font-size: 15px;
+    margin-left: 10px;
+    margin-top: 0;
+    font-family: 'Numans', sans-serif;
+}
+.content-info{
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.Tituloosm{
+    display: block;
+}
+
+.icon-info{
+    padding: 5px;
+}
+
+.icon-leaf{
+    padding: 5px;
+}
+
+.icon-home{
+    padding: 5px;
+}
+
+iframe{
+    width: 100%;
+    background-color: transparent;
+}
+@media (min-width: 768px){
+    .barra:hover{
+    width: 45%;
+    }
+    header ul li:hover .children{
+        display: block;
+    }
+    header ul li .children{
+        display: none;
+    }
+    ul .children{
+        display: none;
+    }
+
+    .logo_EE{
+        display: flex;
+        width: 100px;
+        height: 100px;
+        z-index: 1;
+        float: left;
+    }
+}
